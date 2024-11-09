@@ -370,12 +370,12 @@ log_mgmt_show(struct mgmt_ctxt *ctxt)
         {
             .attribute = "ts",
             .type = CborAttrIntegerType,
-            .addr.integer = &timestamp,
+            .addr.integer = (long long *)&timestamp,
         },
         {
             .attribute = "index",
             .type = CborAttrUnsignedIntegerType,
-            .addr.uinteger = &index,
+            .addr.uinteger = (unsigned long long *)&index,
         },
         {
             .attribute = NULL,
